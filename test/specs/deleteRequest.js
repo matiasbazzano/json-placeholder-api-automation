@@ -12,7 +12,7 @@ describe('API DELETE Requests', () => {
 
     it('DELETE with invalid ID', async () => {
         const response = await apiHelper.get(API_ENDPOINTS.COMMENTS + '/test');
-        functions.expectSuccessResponseStatusCode(response.status);
+        functions.expectNotFoundResponseStatusCode(response.status);
         functions.expectEmptyResponseBody(response.body);
     });
 });
