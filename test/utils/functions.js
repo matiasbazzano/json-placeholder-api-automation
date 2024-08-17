@@ -30,6 +30,13 @@ const functions = {
         expect(responseStatusCode).to.equal(RESPONSE_STATUS.NOT_FOUND);
     },
 
+        /**
+     * Verify if the response status code is equal to Internal Server Error or 500.
+     */
+        expectInternalServerErrorStatusCode(responseStatusCode) {
+            expect(responseStatusCode).to.equal(RESPONSE_STATUS.INTERNAL_SERVER_ERROR);
+        },
+
     /**
      * Verify if the response status code is equal to Created or 201.
      */
